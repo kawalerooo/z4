@@ -20,6 +20,7 @@ if(!$rekord)
         mysqli_query($link, "INSERT INTO users (username, password) VALUES ('$user','$pass')");
         mysqli_close($link);
         echo "Rejestracja udana, $user Jego hasło to $pass";
+        mkdir($user);
 
 
     } else {
